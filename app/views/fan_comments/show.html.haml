@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Author no:
+  = @fan_comment.author_no
+%p
+  %b Name:
+  = @fan_comment.name
+%p
+  %b Body:
+  = @fan_comment.body
+%p
+  %b Deleted:
+  = @fan_comment.deleted
+
+= link_to 'Edit', edit_fan_comment_path(@fan_comment)
+\|
+= link_to 'Back', fan_comments_path

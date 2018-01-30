@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Username:
+  = @user.username
+%p
+  %b Password:
+  = @user.password
+%p
+  %b Password digest:
+  = @user.password_digest
+%p
+  %b Email:
+  = @user.email
+%p
+  %b Dm:
+  = @user.dm
+%p
+  %b Roles:
+  = @user.roles
+%p
+  %b Reviews count:
+  = @user.reviews_count
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path

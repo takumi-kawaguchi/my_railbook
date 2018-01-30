@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @author.user
+%p
+  %b Name:
+  = @author.name
+%p
+  %b Birth:
+  = @author.birth
+%p
+  %b Address:
+  = @author.address
+%p
+  %b Ctype:
+  = @author.ctype
+%p
+  %b Photo:
+  = @author.photo
+
+= link_to 'Edit', edit_author_path(@author)
+\|
+= link_to 'Back', authors_path

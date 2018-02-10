@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @member.name
+%p
+  %b Email:
+  = @member.email
+%p
+  %b Lock version:
+  = @member.lock_version
+
+= link_to 'Edit', edit_member_path(@member)
+\|
+= link_to 'Back', members_path

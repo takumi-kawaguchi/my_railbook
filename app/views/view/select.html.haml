@@ -1,0 +1,5 @@
+= form_for(@book) do |f|
+  -# = f.select :publish, ['記述評論社', '翔泳社', '日経BP社'],
+  -#   { include_blank: '選択してください' }, class: 'pub', multiple: true
+  -# = f.select :publish, { '記述評論社': 1, '翔泳社': 2, '日経BP社': 3 }
+  = select_tag('publish', options_from_collection_for_select(@books, :publish, :publish, '技術評論社'))

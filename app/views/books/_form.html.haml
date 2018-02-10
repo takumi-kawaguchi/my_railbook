@@ -7,7 +7,7 @@
           %li= message
 
   .field
-    = f.label :isbn
+    = f.label :isbn, 'ISBNコード'
     = f.text_field :isbn
   .field
     = f.label :title
@@ -25,4 +25,4 @@
     = f.label :dl
     = f.check_box :dl
   .actions
-    = f.submit 'Save'
+    = f.submit data: { confirm: 'you really mean it?', disable_with: "now uploading" }

@@ -1,0 +1,13 @@
+= form_for(@book) do |f|
+  色選択:
+  = f.color_field :isbn
+  %br
+  = f.date_field :published
+  %br
+  = f.time_field :published
+  %br
+  = f.datetime_field :published
+  %br
+  = f.month_field :published
+  = f.telephone_field :isbn, maxlength: 30, size: 50
+  = f.range_field :price, min: 10, max: 10000

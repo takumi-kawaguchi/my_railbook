@@ -1,0 +1,15 @@
+-# - article = <<'EOS'
+-#   あけおめ
+-#
+-#   ことよろ
+-#   でござる
+-#   <script>alert('happy rails!')</script>
+-# 'EOS'
+-# = simple_format(article, class: :article)
+
+- msg = '<strong>railsは</strong>rubyのフルスタックフレームワークです。MVCアーキテクチャを採用しています。'
+= highlight(msg, "s")
+= raw(msg)
+
+-# - user = User.new
+= link_to_if @user.nil?, 'login', controller: :view, action: :simple_format

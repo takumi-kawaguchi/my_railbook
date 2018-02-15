@@ -4,4 +4,6 @@ class User < ApplicationRecord
   has_many :books, through: :reviews
 
   validates :agreement, acceptance: true
+
+  has_secure_password
 end

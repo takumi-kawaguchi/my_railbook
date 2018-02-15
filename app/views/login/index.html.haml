@@ -1,0 +1,14 @@
+%p{style: "color: red;"}
+  = @error
+
+= form_tag action: :auth do
+  .field
+    = label_tag :username, 'ユーザー名'
+    %br
+    = text_field_tag :username, '', size: 20
+  .filed
+    = label_tag :password, 'パスワード'
+    %br
+    = password_field_tag :password, '', size: 20
+  = hidden_field_tag :referer, flash[:referer]
+  = submit_tag 'ログイン'

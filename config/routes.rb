@@ -44,4 +44,7 @@ Rails.application.routes.draw do
 
   get 'login/index' => 'login#index'
   post 'login/auth' => 'login#auth'
+
+  match 'detail(/:id)' => 'hello#index', via: [:get, :post]
+  root to: 'books#index'
 end
